@@ -1,0 +1,12 @@
+# Fichiers sensibles
+config/config.php
+
+# Dossiers générés
+public/uploads/
+docker/
+
+# Fichiers système
+.DS_Store
+.env
+node_modules/
+vendor/
