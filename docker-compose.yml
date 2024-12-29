@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/php-apache/Dockerfile
+    networks:
+      - camagru_network
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: camagru
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    networks:
+      - camagru_network
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    networks:
+      - camagru_network
+    ports:
+      - "8082:8080"
+
+volumes:
+  db_data:
+
+networks:
+  camagru_network:
+    driver: bridge
