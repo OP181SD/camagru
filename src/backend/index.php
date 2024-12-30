@@ -42,7 +42,6 @@ class Database
     }
 }
 
-// Test the singleton
 $db = Database::getInstance();
 
 ?>
