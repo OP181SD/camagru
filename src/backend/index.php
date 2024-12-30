@@ -2,10 +2,8 @@
 
 class Database
 {
-    // Static variable for Singleton pattern
     private static $instance = null;
 
-    // Database connection parameters
     private $host;
     private $dbname;
     private $user;
@@ -14,21 +12,19 @@ class Database
 
     private $pdo;
 
-    
     private function __construct() {
-        $this->host = "db";           
-        $this->dbname = "camagru";    
-        $this->user = "user";         
+        $this->host = "db";
+        $this->dbname = "camagru";
+        $this->user = "user";
         $this->password = "password";
         $this->dsn = "pgsql:host={$this->host};dbname={$this->dbname}"; 
 
         try {
-            // Establish connection using PDO
             $this->pdo = new PDO($this->dsn, $this->user, $this->password);
             echo "Connexion réussie";
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (Throwable $th) {
-           
+
             echo "Error: " . $th->getMessage();
         }
     }
