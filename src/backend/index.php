@@ -1,3 +1,19 @@
 <?php
-phpinfo();
+
+
+class Database
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 ?>
