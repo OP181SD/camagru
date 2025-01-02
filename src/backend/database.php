@@ -21,7 +21,7 @@ class Database
 
         try {
             $this->pdo = new PDO($this->dsn, $this->user, $this->password);
-            echo "Connexion réussie";
+                // echo "Connecccccccxion ddddcdcéussie";
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (Throwable $th) {
 
