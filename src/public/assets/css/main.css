@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.main-title {
+    padding: 20px;
+    font-size: 6.8rem;
+    color:  #6A42C2;
+    font-weight: 300;
+    font-family: 'Pacifico', cursive;
+}
+
