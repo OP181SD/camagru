@@ -1,3 +1,5 @@
+\c camagru;
+
 -- Création de la table des utilisateurs
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
