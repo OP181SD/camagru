@@ -1,0 +1,241 @@
+.parents-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.publish-feed {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.studio-feed {
+    color: var(--color-text-secondary);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.p-1 {
+    padding: 3.5px; 
+}
+
+.hr-description-section {
+    width: 467px;      
+    max-width: 100%; 
+    height: 1px;
+    background-color: var(--color-border);
+    opacity: 0.6;
+    border: none;    
+}
+
+@media (max-width: 768px) {
+    .hr-description-section {
+        width: 90%;  
+    }
+}
+
+@media (max-width: 480px) {
+    .hr-description-section {
+        width: 100%; 
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.publication-container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 467px;
+    border-radius: var(--radius);
+}
+
+.parents-username-profil-picture {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 12px;
+}
+
+.image-profil {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username-image-profil {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-black);
+}
+
+.more-options {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options-publication {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.mt-10px {
+    margin-top: 10px;
+}
+
+.image-publication {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.comments-and-likes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+} 
+
+.comments-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    gap: 12px;
+    padding-bottom: 10px;
+}
+
+.share-container {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.like-publication {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.share-publication {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+
+.like-publication:hover {
+    transform: scale(1.1);
+}
+
+.like-publication:active {
+    transform: scale(0.95);
+}
+
+.liked-publication {
+    width: 24px;
+    height: 24px;   
+    display: none;
+    cursor: pointer;
+    animation: likeAnimation 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes likeAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.comment-publication {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.likes-publication-section {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.number-likes {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-black);
+}
+
+.display-comments {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+}
+
+.add-comment-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.add-comment-input {
+    border: none;           
+    outline: none;          
+    font-size: 14px;
+    display: block;
+    width: 100%;            
+}
+
+.post-comment-button {
+    color: var(--color-link);
+    font-size: 14px;
+    cursor: pointer;
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+
+.time-feed-publish {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-top: 0.9px;
+}
+
+.no-comments {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.parents-none-publication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-photos-feed {
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 600;
+}

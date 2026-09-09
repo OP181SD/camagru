@@ -1,0 +1,16 @@
+.field-error {
+    color: #d93025;     
+    font-size: 0.85rem;          
+    font-weight: 500;    
+}
+
+.hidden {
+    display: none;
+}
+
+.field-success {
+    color: #367144;       
+    font-size: 0.85rem;            
+    font-weight: 500;    
+}
+

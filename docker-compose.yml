@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/php-apache/Dockerfile
+    networks:
+      - camagru_network
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src:/var/www/html
+      - uploads_data:/var/www/html/public/assets/uploads
+    env_file:
+      - .env
+    depends_on:
+      - camagru-db
+
+  camagru-db:
+    image: postgres:14
+    container_name: camagru-db
+    env_file:
+      - .env
+    networks:
+      - camagru_network
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./docker/postgresql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5430:5432"
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    networks:
+      - camagru_network
+    ports:
+      - "8082:8080"
+
+  mailhog:
+    image: mailhog/mailhog
+    platform: linux/amd64 
+    container_name: mailhog
+    ports:
+      - "1025:1025"  
+      - "8025:8025"
+    networks:
+      - camagru_network
+
+volumes:
+  db_data:
+  uploads_data:
+
+networks:
+  camagru_network:
+    driver: bridge

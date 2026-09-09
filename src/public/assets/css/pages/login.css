@@ -1,0 +1,174 @@
+.login-parents-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.login-container {
+    width: 350px;
+    padding: 40px 30px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.login-header .tagline-login {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form .input-login {
+    padding: 9px 0 7px 8px; 
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    background-color: #fafafa;
+    font-size: 14px;
+    color: var(--color-text);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    margin-top: 8px;
+}
+
+.login-form .input-login:focus {
+    outline: none;
+    border-color: var(--color-border);
+    background-color: var(--color-bg);
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.forgot-password a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.back-home {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.back-home a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.back-home a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn-login {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: var(--color-btn-primary);
+    color: var(--color-bg);
+}
+
+.submit-btn-login:hover {
+    background: var(--color-btn-primary-hover);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.separator .line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-border);
+}
+
+.separator .or {
+    margin: 0 10px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    font-weight: bold;
+}
+
+.btn-open-camagru {
+    display: inline-block;
+    padding: 8px 12px;
+    color: var(--color-bg);
+    font-size: 16px;
+    background: var(--color-btn-secondary);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-open-camagru:hover {
+    background: var(--color-btn-secondary-hover);
+}
+
+.login-signup-container {
+    width: 350px;
+    margin: 20px auto 0; 
+    padding: 20px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.login-signup-container a {
+    color: var(--color-link);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-signup-container a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login-container,
+    .login-signup-container {
+        width: 90%;      
+        padding: 15px;   
+        font-size: 13px; 
+    }
+
+    .login-container {
+        border: none;
+        box-shadow: none;
+    }
+}
